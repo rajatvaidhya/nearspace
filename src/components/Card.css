@@ -1,0 +1,20 @@
+.card-design
+{
+    border: 1px solid rgb(218, 218, 218);
+    border-radius: 10px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+
+}
+
+.card img 
+{
+    width: 90%;
+    height: 100%;
+    margin-top: 1.6rem;
+    border-radius: 10px;
+}
+
+.card-design h4 
+{
+    color:rgb(138, 138, 138);
+}

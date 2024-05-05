@@ -1,0 +1,401 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500;600&display=swap');
+
+/* yeah root class hai jismai hamne jo bhi likha hai vo baaki ke  saare codes ke liye applicable hai */
+
+:root {
+    --red: #ff0000;
+    --light-coral: #f08080;
+    --black: #000000;
+    --light-color: #666;
+    --border: 0.1rem solid rgba(0, 0, 0, 0.1);
+    --box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+}
+
+
+/* yeah code website ki body ke liye likha hai */
+
+* {
+    font-family: Poppins, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: red;
+    border: none;
+    text-decoration: none;
+    /* text-transform: capitalize; */
+    /*Capitalize saare words ke pehle letter lo capital letter mai convert krdega */
+    transition: all .2s ease-in-out;
+}
+
+html {
+    font-size: 62.5%;
+    overflow-x: auto;
+    scroll-padding-top: 112px;
+    scroll-behavior: smooth;
+}
+
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    /*z-index tbhi work krta hai jab positioned ho*/
+    z-index: 999;
+    background: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 3rem 9%;
+}
+
+.header .logo {
+    font-size: 2.5rem;
+    color: black;
+    font-weight: bolder;
+}
+
+.header .logo span {
+    color: red;
+}
+
+.header .navbar a {
+    font-size: 1.7rem;
+    margin: 0 1rem;
+    color: dimgray;
+}
+
+.header .navbar a:hover {
+    color: indianred;
+}
+
+.header .navbar a:visited {
+    color: red;
+}
+
+.btn {
+    display: inline-block;
+    margin-top: 1rem;
+    border-radius: 0.5rem;
+    background: red;
+    color: black;
+    font-weight: 500;
+    font-size: 1.7rem;
+    cursor: pointer;
+    padding: 0.8rem 1rem;
+}
+
+.btn:hover {
+    background: orangered;
+}
+
+.header .btn {
+    margin-top: 0;
+}
+
+header #login-btn i {
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: red;
+    display: none;
+}
+
+div .container {
+    border: red;
+    border-radius: 10px;
+}
+
+#menu-btn {
+    font-size: 2.5rem;
+    color: var(--light-color);
+    cursor: pointer;
+    display: none;
+    /*jab ham website shrink karenge tbhi dikhega*/
+}
+
+.header .active {
+    box-shadow: var(--box-shadow);
+    padding: 2rem 9%;
+}
+
+
+
+/*  */
+
+button[type="submit"] {
+    margin-top: 10px;
+    padding: 10px;
+    /* background-color: #cf1313; */
+    color: rgb(0, 0, 0);
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.contains {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 3rem 2rem;
+}
+
+.contains .title {
+    font-size: 3.5rem;
+    color: #444;
+    margin-bottom: 3rem;
+    text-transform: upperccase;
+    text-align: center;
+}
+
+.contains .title span {
+    color: red;
+}
+
+.contains .products-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+    gap: 2rem;
+}
+
+.contains .products-container .product {
+    text-align: center;
+    padding: 3rem 2rem;
+    background: #fff;
+    box-shadow: 0, 5rem, 1rem, rgba(0, 0, 0, 1);
+    outline: .1rem solid #ccc;
+    outline-offset: -1.5rem;
+    cursor: pointer;
+    border-radius: 40px;
+}
+
+.contains .products-container .product:hover {
+    outline: .2rem solid red;
+    outline-offset: 0;
+}
+
+.contains .products-container .product img {
+    height: 25rem;
+    border-radius: 40px;
+}
+
+.contains .products-container .product:hover img {
+    transform: scale(.9);
+}
+
+.contains .products-container .product h3 {
+    padding: .5rem 0;
+    font-size: 2rem;
+    color: red;
+}
+
+.contains .products-container .product:hover h3 {
+    color: red;
+}
+
+.contains .products-container .product .price {
+    font-size: 2rem;
+    color: black;
+}
+
+.product-preview {
+    position: fixed;
+    top: 0;
+    left: 0;
+    min-height: 100vh;
+    width: 100%;
+    background: rgba(0, 0, 0, .8);
+    display: none;
+    align-items: center;
+    justify-content: center;
+}
+
+.product-preview .preview {
+    display: none;
+    padding: 2rem;
+    text-align: center;
+    background: #fff;
+    position: relative;
+    margin: 2rem;
+    width: 40rem;
+}
+
+.product-preview .preview .active {
+    display: inline-block;
+}
+
+.product-preview .preview img {
+    height: 30rem;
+}
+
+.product-preview .preview .fa-times {
+    position: absolute;
+    top: 1rem;
+    right: 1.5rem;
+    cursor: pointer;
+    color: red;
+    font-size: 4rem;
+}
+
+.product-preview .preview .fa-times:hover {
+    transform: rotate(90deg);
+}
+
+.product-preview .preview h3 {
+    color: red;
+    padding: .5rem 0;
+    font-size: 2.5rem;
+}
+
+.product-preview .preview .stars {
+    font-size: 1.7rem;
+    padding: 1rem 0;
+}
+
+.product-preview .preview .stars i {
+    color: red;
+}
+
+.product-preview .preview .stars .span {
+    color: #999;
+}
+
+.product-preview .preview p {
+    line-height: 1.5;
+    padding: 1rem 0;
+    font-size: 1.6rem;
+    color: red;
+}
+
+.product-preview .preview .price {
+    padding: 1rem 0;
+    font-size: 2.5rem;
+    color: red;
+}
+
+.product-preview .preview .buttons {
+    display: flex;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+    margin-top: 1rem;
+}
+
+.product-preview .preview .buttons a {
+    flex: 1 1 16rem;
+    padding: 1rem;
+    font-size: 1.8rem;
+    color: red;
+    border: 1rem solid red;
+}
+
+.product-preview .preview .buttons a.cart {
+    background: #444;
+    color: #fff;
+}
+
+.product-preview .preview .buttons a.cart:hover {
+    background: #111;
+}
+
+.product-preview .preview .buttons a.buy:hover {
+    background: red;
+    color: #fff;
+}
+
+@media only screen and (max-width: 600px) {
+    form {
+        flex-direction: column;
+        max-width: 400px;
+    }
+}
+
+.container {
+    margin-top: 150px;
+    border: 1px solid #a70e0e;
+    border-radius: 5px;
+    margin-left: 530px;
+    margin-right: 530px;
+}
+
+
+
+.container .fa {
+    width: 5px;
+    padding: 0px;
+    color: white;
+}
+
+
+/* ...............................abhishek..................................... */
+
+
+/*media queries*/
+
+@media(max-width:991px) {
+    html {
+        font-size: 55%;
+    }
+    .header {
+        padding: 2rem;
+    }
+    .header .active {
+        padding: 2rem;
+    }
+    .search-form input[type="text"],
+    .search-form button[type="submit"] {
+        font-size: 5px;
+        padding: 10px;
+    }
+}
+
+@media(max-width:768px) {
+    #menu-btn {
+        display: block;
+    }
+    #menu-btn.fa-times {
+        transform: rotate(180deg);
+    }
+    .header #login-btn i {
+        display: block;
+    }
+    .header #login-btn .btn {
+        display: none;
+    }
+    .header .navbar {
+        position: absolute;
+        top: 99%;
+        left: 0;
+        right: 0;
+        background: white;
+        border-top: var(--border);
+        clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+    }
+    .header .navbar.active {
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+    }
+    .header .navbar a {
+        display: block;
+        margin: 2rem;
+        font-size: 2rem;
+    }
+    .search-form input[type="text"],
+    .search-form button[type="submit"] {
+        font-size: 14px;
+        padding: 8px;
+    }
+    .product-preview .preview img {
+        height: 25rem;
+    }
+}
+
+
+/*for mobile view*/
+
+@media(max-width:450px) {
+    html {
+        font-size: 50%;
+    }
+    .search-form input[type="text"],
+    .search-form button[type="submit"] {
+        font-size: 12px;
+        padding: 6px;
+    }
+}

@@ -1,0 +1,57 @@
+.mycart-container 
+{
+    text-align: center;
+    width: 90%;
+    margin: 0 auto;
+}
+
+h1
+{
+    margin-top: 15rem;
+    text-align: center;
+    font-size: 3rem;
+}
+
+.main-cart-container{
+  display: flex;
+  gap:1rem;
+}
+
+.card-container{
+  margin-top: 3rem;
+  width:70%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap:1rem;
+}
+
+.billing-container{
+  width:30%;
+  padding-left:30px;
+  padding-right:30px;
+  padding-top: 3rem;
+  border: 1px solid gray;
+  border-radius: 10px;
+  position:fixed;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  top:33%;
+  right:1%;
+}
+
+.billing-list-item{
+  display:flex;
+  justify-content: space-between;
+  font-size: 1.4rem;
+  border-bottom: 1px solid gray;
+  padding-bottom: 10px;
+  padding-top: 10px;
+}
+
+
+  
+  @media (max-width: 768px) {
+    .card-container {
+      flex-direction: column;
+    }
+  }
